@@ -1,0 +1,7 @@
+name: infinite_mario_bros
+description: A sample web application
+dependencies:
+  browser: any
+  enjine:
+    git: https://github.com/AshamedMunchkin/Enjine.Dart.git
+  meta: any
