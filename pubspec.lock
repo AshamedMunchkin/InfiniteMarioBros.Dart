@@ -4,15 +4,15 @@ packages:
   browser:
     description: browser
     source: hosted
-    version: "0.6.13"
+    version: "0.6.17+2"
   enjine:
     description:
       ref: null
-      resolved-ref: "1518ea128a4bc3b17c304990a7975715db9306e6"
+      resolved-ref: c6a828bef0ff85f17b753d7bc942210b5f82f976
       url: "https://github.com/AshamedMunchkin/Enjine.Dart.git"
     source: git
     version: "0.0.0"
   meta:
     description: meta
     source: hosted
-    version: "0.6.13"
+    version: "0.6.17+2"
