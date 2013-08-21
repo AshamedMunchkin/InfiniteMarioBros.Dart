@@ -1,22 +1,20 @@
 part of infinite_mario_bros;
 
 class TitleState implements GameState {
-  final Resources _resources = new Resources();
-  final Keyboard _keyboard = new Keyboard();
   DrawableManager _drawableManager;
   Camera _camera;
   num _logoY;
   num _bounce;
+  Background _background;
   Sprite _title;
   Sprite _logo;
-  final SpriteFont _font = redFont;
+  final SpriteFont _font = createRedFont();
 
   void checkForChange(GameStateContext context) {
-    /*if (_keyboard.isKeyDown(KeyCode.S)) {
+    if (keyboard.isKeyDown(KeyCode.S)) {
       globalMapState = new MapState();
-      marioCharacter = new Character(_resources.images['smallMario']);
       context.changeState(globalMapState);
-    }*/
+    }
   }
 
   void draw(CanvasRenderingContext2D context) {
@@ -27,23 +25,16 @@ class TitleState implements GameState {
     _drawableManager = new DrawableManager();
     _camera = new Camera();
 
-    var backgroundGenerator =
-        new BackgroundGenerator(2048, 15, true, LevelType.OVERGROUND);
-    var backgroundLayer0 =
-        new BackgroundRenderer(backgroundGenerator.createLevel(), 320, 240, 2);
-    backgroundGenerator.isDistant = false;
-    var backgroundLayer1 =
-        new BackgroundRenderer(backgroundGenerator.createLevel(), 320, 240, 1);
+    _background = new Background.overground(2048, 8);
 
-    _title = new Sprite(_resources.images['title'], point: new Point(0, 120),
+    _title = new Sprite(resources.images['title'], point: new Point(0, 120),
         fixed: true);
-    _logo = new Sprite(_resources.images['logo'], fixed: true);
+    _logo = new Sprite(resources.images['logo'], fixed: true);
     _font.spriteStrings.add(
         new SpriteString('Press S to Start', new Point(96, 120)));
     _logoY = 20;
 
-    _drawableManager.drawables.add(backgroundLayer0);
-    _drawableManager.drawables.add(backgroundLayer1);
+    _drawableManager.drawables.add(_background);
     _drawableManager.drawables.add(_title);
     _drawableManager.drawables.add(_logo);
     _drawableManager.drawables.add(_font);

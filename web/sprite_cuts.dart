@@ -8,28 +8,28 @@ Map<int, Point> generateCharacterArray(y) {
   return characterArray;
 }
 
-SpriteFont blackFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createBlackFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(0), fixed: true);
 
-SpriteFont redFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createRedFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(8), fixed: true);
 
-SpriteFont greenFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createGreenFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(16), fixed: true);
 
-SpriteFont blueFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createBlueFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(24), fixed: true);
 
-SpriteFont yellowFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createYellowFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(32), fixed: true);
 
-SpriteFont pinkFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createPinkFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(40), fixed: true);
 
-SpriteFont cyanFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createCyanFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(48), fixed: true);
 
-SpriteFont whiteFont = new SpriteFont(resources.images['font'], 8, 8,
+SpriteFont createWhiteFont() => new SpriteFont(resources.images['font'], 8, 8,
     generateCharacterArray(56), fixed: true);
 
 List<List<Rect>> backgroundSheet =
